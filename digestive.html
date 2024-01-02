@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Digestive System Simulation</title>
+    <link rel="icon" type="image/x-icon" href="AVERDEIEN-LOGO-ONLY.ico">
+    <style>
+        body{
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+            background-image: url(digestbkg.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        header{
+            position: fixed; top: 0;
+            background-color: rgb(62, 0, 110);
+            width: 100%;
+        }
+        header img{
+            margin-left: -15px;
+            height: 8vh;
+        }
+        header ul, a{
+            color: rgb(255, 255, 255);
+            font-family: 'Mirza', serif;
+            font-size: 25px;
+            list-style-type: none;
+            text-decoration: none; 
+        }
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+top: 0;
+  right: 0;
+  background-color: rgb(62, 0, 110);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+        footer{
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(62, 0, 110);
+        }
+        footer h1{
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+            padding-left: 1vh;
+        }
+        #ysa p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        .btn-light{
+            background-color: rgb(62, 0, 110);
+        }
+        #rai p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        #cr p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        span{
+            color: rgb(255, 255, 255);
+        }
+        #main{
+            margin-top: 90px;
+            background-color: rgba(240, 248, 255, 0.568);
+            margin-left: 10vw;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            margin-right: 10vw;
+        }
+        #main img{
+            height: 40vh;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        #intro h1{
+            text-align: center;
+            font-family: 'Mirza', serif;
+            font-size: 6vh;
+
+        }
+        #intro p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        #main h1{
+            text-align: center;
+            font-family: 'Mirza', serif;
+            font-size: 6vh;
+
+        }
+        #main p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        #sec1 h1{
+            text-align: center;
+            font-family: 'Mirza', serif;
+            font-size: 5vh;
+
+        }
+        #sec1 h2{
+            text-align: center;
+            font-family: 'Mirza', serif;
+            font-size: 4vh;
+
+        }
+        #sec1 p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        #sec1 video{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 30vh;
+            margin-top: 5px;
+        }
+        @media screen and (max-width: 747px) {
+        #sec1 video{
+            height: 15vh !important;
+        }
+        #sec2 img{
+            height:25vh !important;
+        }
+        #sec3 img{
+            height:25vh !important;
+        }
+        #main img{
+            height:25vh !important;
+        }
+        #sec3 video{
+            height: 15vh !important;
+        }
+        }
+        @media screen and (max-width: 1024px){
+    #sec1 video {
+        height: 20vh;
+}
+#sec3 video {
+        height: 20vh;
+}
+    }
+    #sec2 h1{
+            text-align: center;
+            font-family: 'Mirza', serif;
+            font-size: 6vh;
+
+        }
+        #sec2 p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        .btn-primary {
+    --bs-btn-font-family: 'Mirza', 'serif'; 
+    --bs-btn-font-size: 2vh; 
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(62, 0, 110);
+    --bs-btn-border-color: rgb(62, 0, 110);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgba(62, 0, 110, 0.85);
+    --bs-btn-hover-border-color: rgba(62, 0, 110, 0.852);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(62, 0, 110);
+    --bs-btn-active-border-color: rgb(62, 0, 110);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgb(62, 0, 110);
+    --bs-btn-disabled-border-color: rgb(62, 0, 110);
+    width: 100%;
+        }
+        #sec2 img{
+            height: 40vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #sec3 img{
+            height: 40vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #sec3 h1{
+            text-align: center;
+            font-family: 'Mirza', serif;
+            font-size: 6vh;
+
+        }
+        #sec3 p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        #sec3 video{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            height: 30vh;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="container-fluid mx-0 px-0">
+    <header class="container-fluid d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <img src="AVERDIEN-MONTESSORI-SCHOOL-HEADER.png" alt="AVERDIEN MONTESSORI SCHOOL, WHERE IMAGINATION RUNS FREE, MUSICA. POESIA. CIENCIA. ">
+        </a>
+        <div id="headeritems" class="d-inline-flex p-2">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="about.html">About Us</a>
+                <a href="academics.html">Academics</a>
+                <a href="extracurriculars.html">Extra-Curriculars</a>
+                <a href="contact.html">Contact</a>
+              </div>
+
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+              }
+              </script>
+        </div>
+    </header>
+    <div id="main">
+        <div id="intro">
+       <h1>
+        INTRODUCTION
+       </h1>
+       <p>
+        Humanity has advanced beyond any other creature thanks to our growing awareness of<br>
+         the functioning of our bodies. We've even done enough research on our bodies to be <br>
+         able to sustain them in spacesuits. Isn't that incredible? <br><br>
+
+        But we have to endure before we can move forward. Since it is responsible for absorbing<br>
+         nutrients and giving us the "fuel" we need to work and do even the most basic tasks, our <br>
+         digestive system is vital to human health. We run the possibility of irreversibly harming <br>
+         a significant aspect of our lives if we handle it carelessly, and we won't even be able to <br>
+         determine whether a particular symptom is alarming.<br><br>
+
+         By completing this exercise, we can better picture and comprehend the digestive systems in<br>
+          our bodies and get a "look" at the eerie beauty hidden within even the most ordinary objects. <br>
+          For instance, what happens to the food we eat? 
+       </p>
+        </div>
+        <img src="sci1.jpg" alt="Picture of students in lab">
+        <hr>
+        <div id="sec1">
+            <h1>
+             SECTION 1: STAGES OF FOOD PROCESSING
+            </h1>
+            <h2>
+                SUBSECTION 1: CRUSHING STAGE
+            </h2>
+            <p>
+                <b>Observations:</b><br>
+                In this stage we noticed that the bananas and crackers are the food that we consume. and <br>
+                the lemon juice is representative of the Hydrochloric acid in the stomach or in our simulation<br>
+                the ziploc bag that we used. While the mechanical breakdown of food was demonstrated by our curshing <br>
+                motion of the food inside the ziploc bag. The water in our discussion could be either one of 2 things <br>
+                either water that we consume that travels down to the stomach or saliva from the mouth which moistened <br>
+                food beforehand. The possible biomolecules from the food that was "digested" by the ziploc bag are <br>
+                carbohydrates because of the grains from the crackers.
+                <br><br>
+                <b>Guide Questions:</b><br>
+                1. What is being simulated by putting bananas and crackers in the zip lock?<br>
+                2. What is being simulated by the addition of water?<br>
+                3. What does the zip-locked bag represent?<br>
+                4. What does crushing the food simulate?<br>
+                5. What is being simulated by the addition of orange juice?<br>
+                6. What do you think are the possible biomolecule components of the food inside?<br>
+            </p>
+            <h2>
+                SUBSECTION 2: TRANSFER STAGE
+            </h2>
+            <p>
+                <b>Discussion & Observations:</b><br>
+                Squeezing the stocking allowed us to see a liquid mixture emerge from the sock, <br>
+                but there was still something unidentified solid within. The stocking was effective.<br> 
+                similar to a filter in terms of separating liquid from solids. Most certainly, this <br>
+                is a model of the stocking, or small intestine, sifting the nutrients required by the<br>
+                body (the fluid). The liquid was visible to us flowing out of the stocking and onto the <br>
+                tray. Since it was previously proven that the liquid represented the necessary nutrients <br>
+                It makes sense to suppose that they would enter the body given their proximity to it. Consequently, <br>
+                We think of the tray as a representation of the body. When the liquid passed through the <br>
+                stocking, an indiscernible solid was still present. inside the stocking, which over time <br>
+                became even more firm. We determined that this was the solid human excrement that the digestive<br>
+                system was unable to break down and absorb. The partially formed material resembled excrement, <br>
+                as we discovered as we used the cups to force it out. The rectum was symbolized by the cup holding<br>
+                 the partially solidified substance, the anus by the hole at the bottom, and the waste product, <br>
+                excrement, by the partially solidified substance. Expelling the partially hardened material represented<br> 
+                the final phase of digestion, known as feces, in which the body expels indigestible material that is no <br>
+                longer able to be absorbed.
+                <br><br>
+                <b>Guide Questions:</b><br>
+                7. What is being simulated by the liquid flowing out of the stocking?<br>
+                8. What does the tray represent?<br>
+                9. What is left inside the stocking?<br>
+                10. What is being simulated by pushing the partially solidified content?<br><br>
+                <b>DOCUMENTATION:</b>
+            </p>
+            <video src="biovid2.mp4" muted controls></video>
+            <video src="biovid1.mp4" muted controls></video>
+             </div>
+             <hr>
+            <div id="sec2">
+                <h1>
+                    SECTION 2: SIMULATION OF ABSORPTION
+                   </h1>
+                <p>
+                    <b>Discussion & Observations:</b><br>
+                    We saw that the paper towel that had been folded three times was the one that took up the most water. <br>
+                    This was probably caused by the fact that there was more surface area for the water to soak the more we<br>
+                     folded the paper towel. We noticed that the organ that the paper towels most closely resembled was the <br>
+                     small intestine. Like a paper towel that absorbs more and more water as it folds, the small intestine <br>
+                     absorbs a lot of nutrients because of its huge surface area caused by folds and creases.<br>
+                    <br>
+                    <b>Guide Questions:</b><br>
+                    11. Which paper towel absorbed the largest amount of water? What could be the possible explanation?
+                    <br>
+                    12. In which organ of the digestive system can you compare the paper towels? How does the structure of the organ help in its function
+                    ?<br><br>
+                    <b>DOCUMENTATION:</b>
+                </p>
+                <img src="bioimg.jpg" alt="setup of glasswares after experimentation">
+                <p>Volumes of liquid in Graduated Cylinder that started at 100ml<br>
+                    after tissue paper was dropped into it with the specifications:<br>
+                    no fold, 1-fold, 2-fold, and 3-fold respectively
+                </p>
+                <img src="bioimg2.jpg" alt="final volume of cylinder with least volume">
+                <p>Volume of the graduated cylinder that had 3-fold tissue paper <br>
+                    dropped into it showing it absorbed the most water
+                    </p>
+                
+            </div>
+            <div id="sec3">
+                <h1>
+                    SECTION 3: SIMULATION OF BILE ACTION
+                   </h1>
+                <p>
+                    <b>Discussion & Observations:</b><br>
+                    We noticed that the dishwashing liquid bottle was bubbling and frothy during the simulation. serving as <br>
+                    an emulsifier for the oil and water, dispersing the bigger particles so they may be combined. We saw that <br>
+                    it was comparable to the way that bile and dishwashing solutions disintegrate fat into smaller particles <br>
+                    called fatty acids, which the body may subsequently absorb. Given that it converts lipids into fatty acids, <br>
+                    which aids in the body's absorption, we think the digesting process is chemical.<br>
+                    <br>
+                    <b>Guide Questions:</b><br>
+                    13. Explain the role of bile in digestion. Is it involved in chemical or mechanical digestion?
+                    <br><br>
+                   
+                </p>
+                <img src="bioimg3.jpg" alt="setup of glasswares after experimentation">
+                <p>Output of Section 3
+                </p>
+                <video src="biovid3.mp4" muted controls></video>
+            </div>
+            <h1>CONCLUSION:</h1>
+            <p>Even the most fundamental function of eating isn't all that easy since organisms are so complicated. It's not easy <br>
+                even to put food in our mouths! The food must be physically torn apart by our teeth, shielded from harm by saliva <br>
+                and aiding in swallowing, and then formed into a form that is easily transferred by our tongue to the esophagus. <br><br>
+
+                After being chemically broken down by our stomach, which churns and mixes with acid strong enough to melt metal, <br>
+                our food is thereafter gradually sent to the small intestine, where most of the nutrients and water are absorbed. <br>
+                It has to be folded, wrinkled, and lengthy in order to have precisely the right amount of surface area for food <br>
+                digestion. The stuff will only be sent to the rectum in the form of feces after the large intestine has done its<br>
+                 best to eliminate as much water from it as possible. And then it emerges from the anus as waste material <br><br>
+                 It is critical that we comprehend the functioning of our digestive systems in order to identify any problems as<br> 
+                 soon as they arise. Your small intestine may be collapsing as a result of the "stomach flu." You may have a "bit <br>
+                 of extra watery stool" if something is wrong with your big intestine. Having firsthand observation of this aids in<br>
+                  our ability to better image and comprehend our body.
+            </p>
+            <a href="biology.html" class="p-2 btn btn-primary">BACK TO BIOLOGY LABORATORY PAGE</a>
+    </div>
+    <footer>
+        <h1> Contact Us</h1>
+        <div class="container-fluid d-flex justify-content-between d-flex">
+        <div class="align-items-center d-flex flex-column mb-3">
+            <div id="ysa" class="d-flex flex-column mb-2 p-2">
+            <p>
+            Ysabelle Margrethe Alorro<br>
+            Secratary<br>
+            Email: yalorro2027@clc.pshs.edu.ph
+            </p>
+            </div>
+            <div id="rai" class="d-flex flex-column mb-2 p-2">
+                <p>
+                Raina Rayelle Bautista<br>
+                Acting Headmistress<br>
+                Email: rbautista2027@clc.pshs.edu.ph
+                </p>
+            </div>
+        </div>
+            <div id="cr" class="d-flex flex-column mb-2">
+            <p>
+                Averdien Montesorri School © 2023
+            </p>
+            </div>
+        </div>
+    </footer>
+</body>     
+</html>

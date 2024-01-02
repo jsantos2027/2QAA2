@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Academics</title>
+    <link rel="icon" type="image/x-icon" href="AVERDEIEN-LOGO-ONLY.ico">
+    <style>
+        body{
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        header{
+            position: fixed; top: 0;
+            background-color: rgb(62, 0, 110);
+            width: 100%;
+        }
+        header img{
+            margin-left: -15px;
+            height: 8vh;
+        }
+        header ul, a{
+            color: rgb(255, 255, 255);
+            font-family: 'Mirza', serif;
+            font-size: 25px;
+            list-style-type: none;
+            text-decoration: none; 
+        }
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+top: 0;
+  right: 0;
+  background-color: rgb(62, 0, 110);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+        footer{
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(62, 0, 110);
+        }
+        footer h1{
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+            padding-left: 1vh;
+        }
+        #ysa p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        .btn-light{
+            background-color: rgb(62, 0, 110);
+        }
+        #rai p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        #cr p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        span{
+            color: rgb(255, 255, 255);
+        }
+        #acads h1{
+            font-size: 22.2vw;
+            background-image: url(academicsbkg.jpg);
+            color: rgba(62, 0, 110, 0.825);
+            text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
+             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+            font-family: 'Mirza','serif';
+        }
+        #main{
+            margin-bottom: 30px;
+            margin-top: 40px;
+        }
+        #curri {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#curri img {
+    height: 32vh;
+    border-radius: 80px;
+    margin-top: 20px;
+}
+
+#curri h1 {
+    font-family: 'Mirza', 'serif';
+    font-size: 60px;
+}
+
+#curri p {
+    font-size: 23px;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 767px) {
+    #curri img {
+        width: 100%;
+        max-width: none; 
+        }
+}
+.btn-primary {
+    --bs-btn-font-family: 'Mirza', 'serif'; 
+    --bs-btn-font-size: 2vh; 
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(62, 0, 110);
+    --bs-btn-border-color: rgb(62, 0, 110);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgba(62, 0, 110, 0.85);
+    --bs-btn-hover-border-color: rgba(62, 0, 110, 0.852);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(62, 0, 110);
+    --bs-btn-active-border-color: rgb(62, 0, 110);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgb(62, 0, 110);
+    --bs-btn-disabled-border-color: rgb(62, 0, 110);
+        }
+        #engk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#engk img {
+    height: 34vh;
+    border-radius: 80px;
+    margin-top: 20px; /* Add spacing between text and image on small screens */
+}
+
+#engk h1 {
+    font-family: 'Mirza', 'serif';
+    font-size: 47px;
+}
+
+#engk p {
+    font-size: 23px;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+#bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#bio img {
+    height: 34vh;
+    border-radius: 80px;
+    margin-top: 20px; /* Add spacing between text and image on small screens */
+}
+
+#bio h1 {
+    font-family: 'Mirza', 'serif';
+    font-size: 47px;
+}
+
+#bio p {
+    font-size: 23px;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+@media screen and (max-width: 767px) {
+    #engk img {
+        width: 100%;
+        max-width: none; 
+        }
+}
+    </style>
+</head>
+<body class="container-fluid mx-0 px-0">
+    <header class="container-fluid d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <img src="AVERDIEN-MONTESSORI-SCHOOL-HEADER.png" alt="AVERDIEN MONTESSORI SCHOOL, WHERE IMAGINATION RUNS FREE, MUSICA. POESIA. CIENCIA. ">
+        </a>
+        <div id="headeritems" class="d-inline-flex p-2">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="about.html">About Us</a>
+                <a href="academics.html">Academics</a>
+                <a href="extracurriculars.html">Extra-Curriculars</a>
+                <a href="contact.html">Contact</a>
+              </div>
+
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+              }
+              </script>
+        </div>
+    </header>
+    <div id="main">
+        <div id="acads">
+        <h1> ACADEMICS</h1>
+        </div>
+        <div id="curri" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+        <div class="p-2 d-flex flex-column mb-3">  
+            <h1 class="p-2"> About the Curriculum</h1> 
+            <p class="p-2"> Averdien Montessori School promotes learners<br>
+                            to not only study the sciences and historics<br>
+                            but to be involved in the arts with a carefully<br>
+                            curated hands-on experience currciculum aimed <br>
+                            to prepare students for the next generation.</p>
+            </div>
+            <img class="p-2" src="study1.jpg" alt="students studying">
+            <img class="p-2" src="study2.jpg" alt="students studying again">
+            <img class="p-2" src="study3.jpg" alt="students studying again pt.2">
+        </div>
+        <hr>
+        <div id="engk" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            
+                <img class="p-2" src="ysa.jpg" alt="picture of ysa  ">
+                <img class="p-2" src="rai.jpg" alt="picture of rai">
+                <img class="p-2" src="josh.jpg" alt="picture of josh">
+                <div class="p-2 d-flex flex-column mb-3">
+                <h1 class="p-2"> I've still got love for you?</h1> 
+                <p class="p-2"> A collection of sonnets from our administration<br>
+                                that aim to capture emotions of love and longing<br>
+                                and depict the pain and strength of leaving. The<br>
+                                sonnets are the "unsent letters" for the reason<br>
+                                that the lyrics of the songs contain the hidden<br>
+                                feelings...feelings they are too scared to express. 
+                                </p>
+                </div>
+            </div>
+        <div class="d-grid gap-2 md-block">
+            <a href="english.html" class="p-2 btn btn-primary">Literary Spotlight: I've still got love for you?</a>
+        </div>
+        <hr>
+        <div id="bio" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+        <div class="p-2 d-flex flex-column mb-3">  
+            <h1 class="p-2"> Biology Laboratory</h1> 
+            <p class="p-2"> All Scientfic Discoveries makes a mark on our<br>
+                            history see all the latest explorations and<br>
+                            reports from our students, from the prestigious<br>
+                            laboratories of Averdien Montessori School.</p>
+            </div>
+            <img class="p-2" src="sci1.jpg" alt="student in lab">
+            <img class="p-2" src="sci2.jpg" alt="sstudents in lab">
+            <img class="p-2" src="sci3.jpg" alt="students in lab pt.2">
+        </div>
+        <div class="d-grid gap-2 md-block">
+            <a href="biology.html" class="p-2 btn btn-primary">Biology Laboratory</a>
+        </div>
+        
+    </div>
+    <footer>
+        <h1> Contact Us</h1>
+        <div class="container-fluid d-flex justify-content-between">
+        <div class="align-items-center d-flex flex-column mb-3">
+            <div id="ysa" class="d-flex flex-column mb-2 p-2">
+            <p>
+            <b>YSABELLE MARGRETHE ALORRO</b><br>
+            Secratary<br>
+            Email: yalorro2027@clc.pshs.edu.ph
+            </p>
+            </div>
+            <div id="rai" class="d-flex flex-column mb-2 p-2">
+                <p>
+                <b>RAINA RAYELLE BAUTISTA</b><br>
+                Acting Headmistress<br>
+                Email: rbautista2027@clc.pshs.edu.ph
+                </p>
+            </div>
+        </div>
+            <div id="cr" class="d-flex flex-column mb-2">
+            <p>
+                Averdien Montesorri School © 2023
+            </p>
+            </div>
+        </div>
+    </footer>
+</body>     
+</html>

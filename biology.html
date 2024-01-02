@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Biology Laboratory</title>
+    <link rel="icon" type="image/x-icon" href="AVERDEIEN-LOGO-ONLY.ico">
+    <style>
+        body{
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        header{
+            position: fixed; top: 0;
+            background-color: rgb(62, 0, 110);
+            width: 100%;
+        }
+        header img{
+            margin-left: -15px;
+            height: 8vh;
+        }
+        header ul, a{
+            color: rgb(255, 255, 255);
+            font-family: 'Mirza', serif;
+            font-size: 25px;
+            list-style-type: none;
+            text-decoration: none; 
+        }
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+top: 0;
+  right: 0;
+  background-color: rgb(62, 0, 110);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+        footer{
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(62, 0, 110);
+        }
+        footer h1{
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+            padding-left: 1vh;
+        }
+        #ysa p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        .btn-light{
+            background-color: rgb(62, 0, 110);
+        }
+        #rai p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        #cr p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        span{
+            color: rgb(255, 255, 255);
+        }
+        #main{
+            margin-top: 70px;
+            margin-left: 10vw;
+            margin-right: 10vw;
+        }
+        #main h1{
+            text-align: center;
+            font-size: 6.5vh;
+            font-family: 'Mirza','serif';
+        }
+        #main p{
+            text-align: center;
+            font-size: 2vh;
+        }
+        #main img{
+            height: 50vh;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        @media screen and (max-width: 767px) {
+  #main img{
+    height: 25vh;
+  }
+}
+        .btn-primary {
+    --bs-btn-font-family: 'Mirza', 'serif'; 
+    --bs-btn-font-size: 2vh; 
+    --bs-btn-color: #fff;
+    --bs-btn-bg: rgb(62, 0, 110);
+    --bs-btn-border-color: rgb(62, 0, 110);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: rgba(62, 0, 110, 0.85);
+    --bs-btn-hover-border-color: rgba(62, 0, 110, 0.852);
+    --bs-btn-focus-shadow-rgb: 49,132,253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: rgb(62, 0, 110);
+    --bs-btn-active-border-color: rgb(62, 0, 110);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: rgb(62, 0, 110);
+    --bs-btn-disabled-border-color: rgb(62, 0, 110);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body class="container-fluid mx-0 px-0">
+    <header class="container-fluid d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <img src="AVERDIEN-MONTESSORI-SCHOOL-HEADER.png" alt="AVERDIEN MONTESSORI SCHOOL, WHERE IMAGINATION RUNS FREE, MUSICA. POESIA. CIENCIA. ">
+        </a>
+        <div id="headeritems" class="d-inline-flex p-2">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="about.html">About Us</a>
+                <a href="academics.html">Academics</a>
+                <a href="extracurriculars.html">Extra-Curriculars</a>
+                <a href="contact.html">Contact</a>
+              </div>
+
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+              }
+              </script>
+        </div>
+    </header>
+    <div id="main">
+        <h1> WHY DO WE NEED A BIOLOGY LAB AT AVERDIEN?</h1>
+        <img src="sci2.jpg" alt="students in lab">
+        <p>A biology lab at Averdien Montessori School is crucial for several reasons, aligning with the<br>
+             school's commitment to providing a comprehensive and hands-on educational experience. Firstly,<br>
+              a biology lab serves as a practical extension of the classroom, allowing students to apply theoretical<br>
+               knowledge in a real-world setting. Through hands-on experiments and activities, students can deepen<br>
+                their understanding of biological concepts, fostering a more profound appreciation for the subject.<br><br>
+
+            Furthermore, a biology lab promotes the development of essential scientific skills, such as observation,<br>
+             experimentation, and data analysis. Students learn to use scientific instruments, conduct experiments, <br>
+             and draw conclusions based on empirical evidence. These skills are not only integral to understanding <br>
+             biology but also transferable to various scientific disciplines, cultivating a foundation for future<br>
+              academic and professional endeavors.</p>
+              <hr>
+              <p>
+                And here is the latest experimental report from our labs here at Averdien. Students were tasked to<br>
+                simulate different parts and scopes of the digestive system to see more on their findings click down below
+              </p>
+        <a href="digestive.html" class="p-2 btn btn-primary">DIGETIVE SYSTEM SIMULATION LABORATORY</a>
+    </div>
+    <footer>
+        <h1> Contact Us</h1>
+        <div class="container-fluid d-flex justify-content-between d-flex">
+        <div class="align-items-center d-flex flex-column mb-3">
+            <div id="ysa" class="d-flex flex-column mb-2 p-2">
+            <p>
+            Ysabelle Margrethe Alorro<br>
+            Secratary<br>
+            Email: yalorro2027@clc.pshs.edu.ph
+            </p>
+            </div>
+            <div id="rai" class="d-flex flex-column mb-2 p-2">
+                <p>
+                Raina Rayelle Bautista<br>
+                Acting Headmistress<br>
+                Email: rbautista2027@clc.pshs.edu.ph
+                </p>
+            </div>
+        </div>
+            <div id="cr" class="d-flex flex-column mb-2">
+            <p>
+                Averdien Montesorri School © 2023
+            </p>
+            </div>
+        </div>
+    </footer>
+</body>     
+</html>

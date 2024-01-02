@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mirza:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text&family=Quicksand&display=swap" rel="stylesheet">
+    <title>Admin and Faculty</title>
+    <link rel="icon" type="image/x-icon" href="AVERDEIEN-LOGO-ONLY.ico">
+    <style>
+        body{
+            min-height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+        header{
+            position: fixed; top: 0;
+            background-color: rgb(62, 0, 110);
+            width: 100%;
+        }
+        header img{
+            margin-left: -15px;
+            height: 8vh;
+        }
+        header ul, a{
+            color: rgb(255, 255, 255);
+            font-family: 'Mirza', serif;
+            font-size: 25px;
+            list-style-type: none;
+            text-decoration: none; 
+        }
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+top: 0;
+  right: 0;
+  background-color: rgb(62, 0, 110);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+        footer{
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(62, 0, 110);
+        }
+        footer h1{
+            color: rgb(255, 255, 255);
+            padding-top: 10px;
+            padding-left: 1vh;
+        }
+        #ysa p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        .btn-light{
+            background-color: rgb(62, 0, 110);
+        }
+        #rai p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        #cr p{
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-family: 'Crimson Text', serif;
+        }
+        span{
+            color: rgb(255, 255, 255);
+        }
+        #main{
+            margin-top: 90px;
+            text-align: center;
+        }
+        #main p{
+            font-size: 2vh;
+        }
+        #head h1{
+            font-family: 'Mirza', serif;
+            font-size:7vh;
+        }
+        #teach img{
+            height: 40vh;
+            border: 5px solid #dfba16;
+        }
+        #teach h1{
+            font-family: 'Mirza', serif;
+            font-size: 4vh;
+        }
+        #admin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#admin img {
+    height: 40vh;
+    margin-right: 10px;
+    border: 5px solid #dfba16;
+}
+.p-2{
+    padding: 0% !important;
+}
+#math {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#math img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#math h1{
+    margin-right: 20px;
+}
+
+#sci {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#sci img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#sci h1{
+    margin-right: 20px;
+}
+#his {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#his img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#his h1{
+    margin-right: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    #main img {
+        margin-right: 0%;
+        }
+}
+#bio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#bio img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#bio h1{
+    margin-right: 20px;
+}
+#chem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#chem img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#chem h1{
+    margin-right: 20px;
+}
+#phys {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#phys img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#phys h1{
+    margin-right: 20px;
+}
+#heal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#heal img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#heal h1{
+    margin-right: 20px;
+}
+#eng {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#eng img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#eng h1{
+    margin-right: 20px;
+}
+#fil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#fil img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#fil h1{
+    margin-right: 20px;
+}
+#mus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+#mus img {
+    height: 40vh;
+    margin-right: 20px;
+    border: 5px solid #dfba16;
+}
+#mus h1{
+    margin-right: 20px;
+}
+    </style>
+</head>
+<body class="container-fluid mx-0 px-0">
+    <header class="container-fluid d-flex justify-content-between align-items-center">
+        <a href="index.html">
+            <img src="AVERDIEN-MONTESSORI-SCHOOL-HEADER.png" alt="AVERDIEN MONTESSORI SCHOOL, WHERE IMAGINATION RUNS FREE, MUSICA. POESIA. CIENCIA. ">
+        </a>
+        <div id="headeritems" class="d-inline-flex p-2">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="about.html">About Us</a>
+                <a href="academics.html">Academics</a>
+                <a href="extracurriculars.html">Extra-Curriculars</a>
+                <a href="contact.html">Contact</a>
+              </div>
+
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+              
+              <script>
+              function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+              }
+              
+              function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+              }
+              </script>
+        </div>
+    </header>
+    <div id="main">
+        <div id="head">
+        <h1>
+            ADMINISTRATION AND FACULTY
+           </h1>
+           <p> Meet the esteemed faculty and staff of Averdien that help everyday<br>
+            in shaping our students' tomorrow </p>
+        </div>
+        <div id="teach">
+       <h1>
+        ACTING HEADMISTRESS
+       </h1>
+       <img src="raiad.jpg" alt="picture of headmistress Raina">
+       <p>Raina Rayelle Bautista</p>
+
+       <div id="admin" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+        <div class="d-flex flex-column mb-3">
+            <h1>SECRETARY</h1>
+        <img class="p-2" src="ysaad.jpg" alt="picture of ysa">
+        <p>Ysabelle Margrethe Alorro</p>
+        </div>
+        <div class="d-flex flex-column mb-3">
+            <h1>ACADEMIC SYSTEM HEAD</h1>
+        <img class="p-2" src="joshad.jpg" alt="picture of josh">
+        <p>Joshua Angelo Santos</p>
+        </div>
+        </div>
+
+        <h1>ACADEMIC SYSTEM: MATH UNIT</h1>
+        <div id="math" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>ALGEBRA</h1>
+            <img class="p-2" src="francesad.jpg" alt="picture of frances">
+            <p>Frances Agape De Leon</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>GEOMETRY</h1>
+            <img class="p-2" src="kyliead.jpg" alt="picture of kylie">
+            <p>Kylie Nicoli Zaratan</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>CALCULUS</h1>
+            <img class="p-2" src="rafad.jpg" alt="picture of raf">
+            <p>Rafael Jaron Martin</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>RESEARCH</h1>
+            <img class="p-2" src="joshad.jpg" alt="picture of josh">
+            <p>Joshua Angelo Santos</p>
+            </div>
+            </div>
+
+        <h1>ACADEMIC SYSTEM: BIOLOGY UNIT</h1>
+        <div id="bio" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>BIOCHEMISTRY</h1>
+            <img class="p-2" src="gesuad.jpg" alt="picture of gesu">
+            <p>Anna Maria Gesu Villamil</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>BIOETHICS</h1>
+            <img class="p-2" src="azilad.jpg" alt="picture of azil">
+            <p>Azillana Madrid</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>MICROBIOLOGY</h1>
+            <img class="p-2" src="carriead.jpg" alt="picture of carrie">
+            <p>Caroline Sanguyu</p>
+            </div>
+            </div>
+        
+
+        <h1>ACADEMIC SYSTEM: ENGLISH UNIT</h1>
+        <div id="eng" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>LITERATURE</h1>
+            <img class="p-2" src="raphad.jpg" alt="picture of raph">
+            <p>Raphael Mark Abes</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>CREATIVE WRITING</h1>
+            <img class="p-2" src="phiad.jpg" alt="picture of phia">
+            <p>Sophia Margarette Alde</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>GRAMMAR</h1>
+            <img class="p-2" src="jaedad.jpg" alt="picture of jaeda">
+            <p>Jaeda Adrienne Soller</p>
+            </div>
+            </div>
+        
+
+        <h1>ACADEMIC SYSTEM: HISTORY UNIT</h1>
+        <div id="his" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>WORLD HISTORY</h1>
+            <img class="p-2" src="liamad.jpg" alt="picture of liam">
+            <p>Liam Maxim Cortex</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>PHILIPPINE HISTORY</h1>
+            <img class="p-2" src="abbyad.jpg" alt="picture of abby">
+            <p>Arvisse Claire Cuevas</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>ECONOMICS</h1>
+            <img class="p-2" src="daphad.jpg" alt="picture of daph">
+            <p>Daphne Carreon</p>
+            </div>
+        </div>
+
+        <h1>ACADEMIC SYSTEM: FILIPINO UNIT</h1>
+        <div id="fil" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>GRAMMATIKA</h1>
+            <img class="p-2" src="samad.jpg" alt="picture of sam">
+            <p>Samantha Jireh Narciso</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>MALIKHAING PAGSUSULAT</h1>
+            <img class="p-2" src="ysaad.jpg" alt="picture of ysa">
+            <p>Ysabelle Margrethe Alorro</p>
+            </div>
+        </div>
+
+        <h1>ACADEMIC SYSTEM: HEALTH UNIT</h1>
+        <div id="heal" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>PHYSICAL EDUCATION</h1>
+            <img class="p-2" src="kuzad.jpg" alt="picture of markuz">
+            <p>Markuz Gabriel Aranda</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>HEALTH & FITNESS</h1>
+            <img class="p-2" src="euanad.jpg" alt="picture of euan">
+            <p>Euan Jacob Cruz</p>
+            </div>
+        </div>
+
+        <h1>ACADEMIC SYSTEM: MUSIC & ARTS</h1>
+        <div id="mus" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>MUSIC</h1>
+            <img class="p-2" src="jazerad.jpg" alt="picture of jazer">
+            <p>Edrei Jazer Olpindo</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>MULTIMEDIA ARTS</h1>
+            <img class="p-2" src="krishaad.jpg" alt="picture of krisha">
+            <p>Krisha Rihanna Tinio</p>
+            </div>
+        </div>
+
+        <h1>ACADEMIC SYSTEM: PHYSICS</h1>
+        <div id="phys" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>NUCLEAR ENGINEERING</h1>
+            <img class="p-2" src="dosad.jpg" alt="picture of dos">
+            <p>Joseph Dos Mongcal</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>GENERAL PHYSICS</h1>
+            <img class="p-2" src="mattad.jpg" alt="picture of matt">
+            <p>Matt Gabirel Fernandez</p>
+            </div>
+        </div>
+
+        <h1>ACADEMIC SYSTEM: CHEMISTRY</h1>
+        <div id="chem" class="d-flex flex-row mb-3 container-fluid d-flex justify-content-center align-items-center">
+            <div class="d-flex flex-column mb-3">
+                <h1>ORGANIC CHEMISTRY</h1>
+            <img class="p-2" src="tanyaad.jpg" alt="picture of tanya">
+            <p>Tanya Annika Jimenez</p>
+            </div>
+            <div class="d-flex flex-column mb-3">
+                <h1>INORGANIC CHEMISTRY</h1>
+            <img class="p-2" src="euanad.jpg" alt="picture of euan">
+            <p>Euan Jacob Cruz</p>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <footer>
+        <h1> Contact Us</h1>
+        <div class="container-fluid d-flex justify-content-between d-flex">
+        <div class="align-items-center d-flex flex-column mb-3">
+            <div id="ysa" class="d-flex flex-column mb-2 p-2">
+            <p>
+            Ysabelle Margrethe Alorro<br>
+            Secratary<br>
+            Email: yalorro2027@clc.pshs.edu.ph
+            </p>
+            </div>
+            <div id="rai" class="d-flex flex-column mb-2 p-2">
+                <p>
+                Raina Rayelle Bautista<br>
+                Acting Headmistress<br>
+                Email: rbautista2027@clc.pshs.edu.ph
+                </p>
+            </div>
+        </div>
+            <div id="cr" class="d-flex flex-column mb-2">
+            <p>
+                Averdien Montesorri School © 2023
+            </p>
+            </div>
+        </div>
+    </footer>
+</body>     
+</html>
